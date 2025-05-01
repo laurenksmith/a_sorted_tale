@@ -23,7 +23,7 @@ def quicksort(list, start, end, comparison_function):
     list[end], list[pivot_idx] = list[pivot_idx], list[end]
     less_than_pointer = start
     for i in range(start, end):
-        if pivot_element > list[i]:
+        if comparison_function(pivot_element > list[i]):
             list[i], list[less_than_pointer] = list[less_than_pointer], list[i]
             less_than_pointer += 1
     list[end], list[less_than_pointer] = list[less_than_pointer], list[end]

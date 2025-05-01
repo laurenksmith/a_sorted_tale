@@ -34,3 +34,6 @@ sort_2 = sorts.bubble_sort(bookshelf, by_author_ascending)
 
 for book in sort_2:
     print(book['author'])
+
+# create a second copy of the bookshelf data
+bookshelf_v2 = bookshelf.copy()
