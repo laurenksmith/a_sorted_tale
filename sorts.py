@@ -15,7 +15,7 @@ def bubble_sort(arr, comparison_function):
     return arr
 
 
-def quicksort(list, start, end):
+def quicksort(list, start, end, comparison_function):
     if start >= end:
         return
     pivot_idx = random.randrange(start, end + 1)
@@ -27,5 +27,5 @@ def quicksort(list, start, end):
             list[i], list[less_than_pointer] = list[less_than_pointer], list[i]
             less_than_pointer += 1
     list[end], list[less_than_pointer] = list[less_than_pointer], list[end]
-    quicksort(list, start, less_than_pointer - 1)
-    quicksort(list, less_than_pointer + 1, end)
+    quicksort(list, start, less_than_pointer - 1, comparison_function)
+    quicksort(list, less_than_pointer + 1, end, comparison_function)
