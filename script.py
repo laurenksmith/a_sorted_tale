@@ -51,8 +51,15 @@ def by_total_length(book_a, book_b):
     return len(book_a['author_lower']) + len(book_a['title_lower']) > len(book_b['author_lower']) + len(book_b['title_lower'])
 
 
-# run bubble sort on long_bookshelf using by_total_length as the comparison function.
-sort_3 = sorts.bubble_sort(long_bookshelf, by_total_length)
+# # run bubble sort on long_bookshelf using by_total_length as the comparison function
+# sort_3 = sorts.bubble_sort(long_bookshelf, by_total_length)
+#
+# for book in sort_3:
+#     print(len(book['author_lower']) + len(book['title_lower']))
 
-for book in sort_3:
+
+# run quicksort on long_bookshelf using by_total_length as the comparison function
+sorts.quicksort(long_bookshelf, 0, len(long_bookshelf) - 1, by_total_length)
+
+for book in long_bookshelf:
     print(len(book['author_lower']) + len(book['title_lower']))
