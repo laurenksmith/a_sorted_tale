@@ -7,7 +7,7 @@ def bubble_sort(arr, comparison_function):
     while not sorted:
         sorted = True
         for idx in range(len(arr) - 1):
-            if comparison_function(arr[idx] > arr[idx + 1]):
+            if comparison_function(arr[idx], arr[idx + 1]):
                 sorted = False
                 arr[idx], arr[idx + 1] = arr[idx + 1], arr[idx]
                 swaps += 1
