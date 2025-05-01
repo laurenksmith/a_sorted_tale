@@ -28,3 +28,9 @@ def by_author_ascending(book_a, book_b):
 # create a new copy of the bookshelf data
 bookshelf_v1 = bookshelf.copy()
 
+
+# sort the bookshelf by author's full name using bubble sort
+sort_2 = sorts.bubble_sort(bookshelf, by_author_ascending)
+
+for book in sort_2:
+    print(book['author'])
