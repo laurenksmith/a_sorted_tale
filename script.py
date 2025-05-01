@@ -44,3 +44,9 @@ sorts.quicksort(bookshelf_v2, 0, len(bookshelf_v2) - 1, by_author_ascending)
 
 for book in bookshelf_v2:
     print(book['author'])
+
+
+# add a new comparison function to sort the books by the length of the sum of the number of characters in the book as
+# well as the author's name
+def by_total_length(book_a, book_b):
+    return len(book_a['author_lower']) + len(book_a['title_lower']) > len(book_b['author_lower']) + len(book_b['title_lower'])
