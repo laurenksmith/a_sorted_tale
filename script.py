@@ -37,3 +37,10 @@ for book in sort_2:
 
 # create a second copy of the bookshelf data
 bookshelf_v2 = bookshelf.copy()
+
+
+# use quicksort on bookshelf_v2 by author ascending
+sorts.quicksort(bookshelf_v2, 0, len(bookshelf_v2) - 1, by_author_ascending)
+
+for book in bookshelf_v2:
+    print(book['author'])
